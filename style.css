@@ -1,0 +1,156 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('Images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg') center/cover fixed;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.header_div{
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header h1, header p {
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #0f0;
+    color: #0f0;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header p {
+    top: 52%;
+    font-size: 22px;
+    visibility: hidden;
+    animation: faire_apparaitre 0s linear 3s forwards, typing_p 3s steps(30, end) 3s forwards, flicker 1.5s infinite alternate, curseur 1s step-start infinite;
+}
+
+header h1 {
+    font-size: 50px;
+    animation: typing_h1 2s steps(30, end) forwards, flicker 1.5s infinite alternate, curseur 1s step-start infinite, curseur_none 0s linear 3s forwards;
+}
+
+@keyframes curseur_none {
+    to { border: 0px;}
+}
+
+@keyframes faire_apparaitre {
+    to { visibility: visible;}
+}
+
+@keyframes curseur {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing_h1 {
+    from { width: 0; }
+    to { width: 34%; }
+}
+
+@keyframes typing_p {
+    from { width: 0; }
+    to { width: 30%; }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0; }
+    50% { opacity: 0.8; text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 25px #0f0; }
+    100% { opacity: 1; text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0; }
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+}
+
+.experience h2 {
+    text-align: center;
+    margin: 10px;
+    font-size: x-large;
+}
+
+.experience-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.experience-text {
+    width: 60%;
+    height: 100%;
+}
+
+.experience-image {
+    width: 30%;
+    height: 200px;
+}
+
+.experience-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.experience-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-buttons button {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.experience-buttons button:hover {
+    background: #777;
+}
+
+.skill-tag {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #666;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
