@@ -9,52 +9,195 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+    <div class="parallax"></div>
+    <div class="content-parallax">
 
-    <header>
-        <div class="header_div">
-            <h1>Dylan Senasson</h1>
-            <p>Commercial & Développeur Web</p>
-        </div>
-    </header>
+        <header>
+            <a>
+                <img src="Images/logo-cv.png" alt="logo du site" class="img-logo" href="#acceuil">
+            </a>
+            <nav class ="navigation">
+                <ul class="menu">
+                    <li><a href="#acceuil">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#experience">Expériences</a></li>
+                    <li><a href="#projet">Projet</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section id="experience" class="experience">
-        <h2>Expériences Professionnelles</h2>
-        <div class="experience-buttons">
-            <button class="experience-button" data-index="0">Call Masther</button>
-            <button class="experience-button" data-index="1">Sous-directeur</button>
-            <button class="experience-button" data-index="2">WordPress</button>
-        </div>
+        <audio id="sound_key">
+            <source src="sound/Key_Clavier.mp3" type="audio/mpeg">
+        </audio>
 
-        <div class="experience-container">
-            <div class="experience-text">
-                <h3 id="experience-title">Commercial terrain chez Call Masther - 2 ans (2022 - 2024)</h3>
-                <p id="experience-text">J’ai développé et géré un portefeuille clients en prospectant des leads qualifiés et en achetant des contacts ciblés, ce qui m’a permis de vendre des formations professionnelles adaptées aux besoins des entreprises. J’ai également pris en charge l’ensemble du processus de financement via les OPCOs, incluant la création de comptes, la rédaction des conventions et le suivi des demandes. En parallèle, j’ai négocié les restes à charge pour les entreprises et assuré un suivi rigoureux afin de garantir leur satisfaction et leur engagement dans nos programmes de formation.</p>
-                <h4>compétences développées : </h4>
-                <div id="experience-skills" class="experience-skills">
-                    <a href="#negociation" class="skill-tag">#Négociation</a>
-                    <a href="#relation-client" class="skill-tag">#Relation Client</a>
+        <section class="home">
+            <div class = "acceuil-container">
+                <div class="header_div">
+                    <h1>Dylan Senasson</h1>
+                    <h2>Commercial & Développeur Web</h2>
+                    <p>Bienvenue sur mon premier site web ! 🚀 Vous y trouverez mon CV interactif, mettant en avant mes compétences et expériences professionnelles, ainsi qu’un portfolio regroupant mes projets de développement. Passionné par le développement web et le développement d’applications Java, je suis à la recherche d’un stage ou d’une première expérience pour continuer à apprendre et évoluer dans ce domaine. N’hésitez pas à parcourir mon site et à me contacter pour toute opportunité ou collaboration ! 💡✨</p>
+                    <a href="#contact">Contactez-moi</a>
+                    <a href="#skills">Mes projets</a>  
+                    <div class="ordinateur">
+                        <img src="Images/Animation_Home/Ordinateur.svg" alt="ordinateur">
+                    </div>
+                    <div class="reflect-ordinateur"></div>
+                    <div class="first_eng">
+                        <img src="Images/Animation_Home/engrenage.svg" alt="Un engrenage">
+                    </div>
+                    <div class="second_eng">
+                        <img src="Images/Animation_Home/engrenage.svg" alt="un engrenage">
+                    </div>
+                    <div class="third_eng">
+                        <img src="Images/Animation_Home/engrenage.svg" alt="un engrenage">
+                    </div>
+                    <div class="smartphone">
+                        <img src="Images/Animation_Home/Télephone.svg" alt="un telephone">
+                    </div>
+                    <div class="shadow_phone"></div>
+                    <div class="page_computer">
+                        <img src="Images/Animation_Home/gif_ecran_ordi.gif" alt="une animation de page web">
+                    </div>
+                    <div class="bal_html">
+                          <img src="Images/Animation_Home/Balise_html.svg" alt="icon Html">                       
+                    </div>
+                    <div class="bal_check">
+                        <img src="Images/Animation_Home/Balise_check.svg" alt="icon Check-up">
+                    </div>
+                    <div class="bal_cloud">
+                        <img src="Images/Animation_Home/Balise_cloud.svg" alt="icon cloud">
+                    </div>    
+                    <div class="bal_eng">
+                        <img src="Images/Animation_Home/Balise_engrenage.svg" alt="icon engrenage">
+                    </div> 
+                    <div class="icon_insta">
+                        <img src="Images/Animation_Home/icon_insta.svg" alt="icon_instagram">
+                    </div>    
+                    <div class="icon_yt">
+                        <img src="Images/Animation_Home/icon_youtube.svg" alt="Icon_Youtube">
+                    </div>  
+                    <div class="icon_x">
+                        <img src="Images/Animation_Home/icon_x.svg" alt="Icon_X">
+                    </div>     
                 </div>
             </div>
-            <div class="experience-image">
-                <img id="experience-image" src="Images/commercial_masther.jpg" alt="Expérience" class="image-zoom">
+        </section>
+        <section class="about-me">
+            <div class="center_inline_block">
+                <h2>A propos de moi</h2>
             </div>
-        </div>
-    </section>
+            <div class= about-container>
+                <div class="about-text">
+                    <h2 style="text-align: center">Bienvenue sur mon site !</h2>
+                    <p><em>"L'échec n'est qu'accomplissement."</em></p>
+                    <p>Passionné par le digital et la technologie, j’ai construit mon parcours en mêlant commerce, gestion et développement web. Initialement conseiller de vente chez Bouygues Telecom, j’ai rapidement évolué vers un poste de commercial terrain dans le secteur de la formation professionnelle, où j’ai affûté mes compétences en négociation, prospection et gestion de la relation client. Mon sens de l’analyse et ma capacité à structurer des stratégies commerciales m’ont permis d’accéder au poste d’assistant de direction, où j’ai supervisé la facturation, la veille réglementaire et l’optimisation des processus internes. <br>
+                        <br>Parallèlement, j’ai développé une expertise en conception web en réalisant plusieurs sites WordPress, notamment <a href="mpassionate.fr">mpassionate.fr</a> et <a href="jd-teach.fr">jd-teach.fr</a>, renforçant ainsi ma maîtrise des outils numériques et du SEO. Désireux d’approfondir mes compétences techniques, j’ai entrepris une formation en développement d’applications Java chez OpenClassrooms (niveau Bac+3), me permettant d’acquérir une solide base en algorithmie, programmation orientée objet et conception logicielle. Aujourd’hui, je suis à la recherche d’une première expérience ou d’un stage en développement web ou en développement d’applications Java, avec pour ambition d’évoluer vers un poste alliant expertise technique et stratégie digitale.</p>
+                </div>
+                <div class="about-img">
+                <img src="Images/20230918_054921.jpg" alt="image de moi">
+                    <h3>Vous souhaitez discuter ?</h3>
+                    <button class="button-contact" id="button-about">Contactez-moi</button>
+                </div>
+                <div class="contact-div hidden">
+                    <div class="div1-contact">
+                    <h2>Contact</h2>
+                    <h3>Formulaire de contact</h3>
+                    <p>Si vous souhaitez me contacter directement, merci de m'envoyer un message  via le formulaire çi-dessous</p>
+                        <form class="contact-form">
+                            <label for="email">Email <span>*</span> :</label>
+                            <input type="email" id="email" name="email" required placeholder="Votre email">
+                            
+                            <label for="phone">Téléphone :</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Votre numéro (optionnel)">
+                            
+                            <label for="message">Message :</label>
+                            <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+                            
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                    <div class="div2-contact">
+                        <p>Vous préferez me contacter directement ? voici mes coordonnées :</p>
+                        <div class="contact-direct">
+                            <p><a href="mailto:dylan.senasson@outlook.fr">dylan.senasson@outlook.fr</a></p>
+                            <p><span class="phone-number">06 XX XX XX XX</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon_reseaux hidden">
+                    <div class="icon_rese">
+                        <div class="icon_res">
+                            <a href="www.instagram.com"><img src="Images/Animation_Home/icon_insta2.svg" alt="icon_instagram"></a>
+                        </div>  
+                        <p>instagram</p>
+                    </div class="icon_rese"> 
+                    <div> 
+                        <div class="icon_res">
+                            <img src="Images/Animation_Home/icon_whatapp.svg" alt="Icon_whatapp">
+                        </div> 
+                        <p>Whatapp</p> 
+                    </div>
+                    <div class="icon_rese">
+                        <div class="icon_res">
+                            <img src="Images/Animation_Home/icon_likedin.svg" alt="Icon_linkedin">
+                        </div> 
+                        <p>LinkedIn</p>
+                    </div>
+                </div>  
+            </div>
+        </section>
 
-    <section id="skills">
-        <h2>Compétences</h2>
-        <div class="skills-grid">
-            <div id="negociation" class="skill">Négociation</div>
-            <div id="relation-client" class="skill">Relation Client</div>
-            <div id="wordpress" class="skill">WordPress</div>
-        </div>
-    </section>
+        <section id="experience" class="experience">
+            <div class="center_inline_block">
+                <h2>Expériences Professionnelles</h2>
+            </div>                
+            <div class="experience-buttons">
+                <button class="experience-button" data-index="0">Call Masther</button>
+                <div class="button-separator"></div>
+                <button class="experience-button" data-index="1">Assistant de direction</button>
+                <div class="button-separator"></div>
+                <button class="experience-button" data-index="2">Projet Wordpress</button>
+                <div class="button-separator"></div>
+                <button class="experience-button" data-index="3">Conseiller de vente</button>
+                <div class="button-separator"></div>
+                <button class="experience-button" data-index="4">Formation Java Bac+3</button>
+            </div>
+            <div class="filter_section">
+                <div class="experience-container">
+                    <div class="experience-text">
+                        <div class="experience-base">
+                        <h3 id="experience-title">Commercial terrain chez Call Masther - 2 ans (2022 - 2024)</h3>
+                        <p id="experience-text">J’ai développé et géré un portefeuille clients en prospectant des leads qualifiés et en achetant des contacts ciblés, ce qui m’a permis de vendre des formations professionnelles adaptées aux besoins des entreprises. J’ai également pris en charge l’ensemble du processus de financement via les OPCOs, incluant la création de comptes, la rédaction des conventions et le suivi des demandes. En parallèle, j’ai négocié les restes à charge pour les entreprises et assuré un suivi rigoureux afin de garantir leur satisfaction et leur engagement dans nos programmes de formation.</p>
+                        </div>
+                        <div class="experience-skill">
+                            <h4>compétences développées : </h4>
+                            <div id="experience-skills" class="experience-skills">
+                                <a href="#negociation" class="skill-tag">#Négociation</a>
+                                <a href="#relation-client" class="skill-tag">#Relation Client</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-image">
+                        <img id="experience-image" src="Images/commercial_masther.jpg" alt="Expérience">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="hobbies">
-        <h2>Hobbies</h2>
-        <p>À compléter...</p>
-    </section>
+        <section id="skills">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div id="negociation" class="skill">Négociation</div>
+                <div id="relation-client" class="skill">Relation Client</div>
+                <div id="wordpress" class="skill">WordPress</div>
+            </div>
+        </section>
 
-    
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>À compléter...</p>
+        </section>
+    </div>
 </body>
 </html>
