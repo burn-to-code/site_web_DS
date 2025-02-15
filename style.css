@@ -910,6 +910,19 @@ form #email {
     flex-direction: column;
 }
 
+/* SECTION COMPETENCE */
+
+.skills h2 {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #d0a9f5, #b266ff, #9d4edd, #7b2cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: inline-block;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Caché sans casser le display:flex */
 .hidden {
     opacity: 0;
@@ -937,4 +950,136 @@ form #email {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.skill_com {
+    background-color: green;
+    width: 33%;
+    height: 500px;
+    transition: 0.3s linear;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s ease;
+    background-image: url(Images/commercial_masther.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.skill_dev {
+    background-color: red;
+    width: 33%;
+    height: 500px;
+    transition: 0.8s linear;
+    position: relative;
+    transition: 0.8s ease;
+    background-image: url(Images/dev_image.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.skill_tech {
+    background-color: yellow;
+    width: 33%;
+    height: 500px;
+    transition: 0.8s linear;
+    position: relative;
+    transition: 0.8s ease;
+    background-image: url(Images/fond_tech.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.skill_com:hover {
+    width: 120%;
+}
+
+.skill_com:hover .list-comp-com {
+    right: 50px;
+}
+
+.skill_com:hover .first_vue {
+    display: none;
+}
+
+.skill_dev:hover {
+    width: 120%;
+}
+
+.skill_dev:hover .list-comp-com {
+    right: 50px;
+}
+
+
+.skill_dev:hover .first_vue {
+    display: none;
+}
+
+.skill_tech:hover {
+    width: 120%;
+}
+
+.skill_tech:hover .list-comp-com {
+    right: 50px;
+}
+
+
+.skill_tech:hover .first_vue {
+    display: none;
+}
+
+.first_vue {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 
+            -2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.list-comp-com {
+    height: 250px;
+    width: 250px;
+    background-color: violet;
+    position: absolute;
+    right: -100%;
+    top: 25%;
+}
+
+.separator {
+    background-color: white;
+    height: 1px;
+    width: 40px;
+}
+
+.filter_exp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.first_vue h3 {
+    font-size: 28px;
 }
