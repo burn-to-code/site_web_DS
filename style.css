@@ -1,3 +1,6 @@
+/* ANIMATION */
+
+/* CORPS PRINCIPAL / CORPS PRINCIPAL / CORPS PRINCIPAL */
 body {
     background-color: #121212;
     color: #ffffff;
@@ -26,6 +29,31 @@ body {
     padding: 50px;
 }
 
+section {
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+button {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* HEADER */
+/* reste en position fixe en haut*/
 header {
     display: flex;
     justify-content: space-between; 
@@ -39,9 +67,13 @@ header {
     z-index: 1000;
 }
 
+/* Logo d'acceuil */
 .img-logo {
     height: 60px; 
 }
+/* Logo d'acceuil */
+
+/* navigation du menu a droite du header (sous forme de liste) */
 
 .navigation {
     display: flex;
@@ -72,7 +104,11 @@ header {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
+/* fin de la navigation  */
+/* FIN DU HEADER */
 
+/* SECTION HOME / SECTION HOME */
+/* div principal */
 .acceuil-container {
     text-align: left;
     padding: 100px 20px;
@@ -89,7 +125,7 @@ header {
 }
 
 
-.header_div{
+.acceuil_div{
     display: flex;
     height: 450px;
     flex-direction: column;
@@ -98,7 +134,7 @@ header {
 
 }
 
-.header_div h1, .header_div h2 {
+.acceuil_div h1, .acceuil_div h2 {
     font-family: 'Courier New', monospace;
     overflow: hidden;
     white-space: nowrap;
@@ -109,7 +145,7 @@ header {
     left: 5%;
 }
 
-.header_div h2 {
+.acceuil_div h2 {
     left: 5%;
     top: 36%;
     font-size: 22px;
@@ -117,13 +153,13 @@ header {
     animation: faire_apparaitre 0s linear 3s forwards, typing_h2 3s steps(30, end) 3s forwards, flicker 1.5s infinite alternate, curseur 1s step-start infinite;
 }
 
-.header_div h1 {
+.acceuil_div h1 {
     top: 28%;
     font-size: 50px;
     animation: typing_h1 2s steps(30, end) forwards, flicker 1.5s infinite alternate, curseur 1s step-start infinite, curseur_none 0s linear 3s forwards;
 }
 
-.header_div p {
+.acceuil_div p {
     position : absolute;
     overflow: hidden;
     margin: 0%;
@@ -137,7 +173,7 @@ header {
     animation: apparition 2s ease-in-out forwards 3s ;
 }
 
-.header_div a{
+.acceuil_div a{
     position: absolute;
     overflow: hidden;
     left: 8%;
@@ -161,7 +197,7 @@ header {
     z-index: 1000;
 }
 
-.header_div a:hover {
+.acceuil_div a:hover {
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3); 
@@ -169,18 +205,18 @@ header {
 }
 
 /* Effet active lors de la pression sur le bouton */
-.header_div a:active {
+.acceuil_div a:active {
     transform: translateY(0); 
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Effet focus (lors de la navigation clavier ou clic) */
-.header_div a:focus {
+.acceuil_div a:focus {
     outline: none; /* Supprime le contour par défaut */
     box-shadow: 0 0 0 3px rgba(148, 187, 233, 0.6); /* Ajoute une bordure bleue lors du focus */
 }
 
-.header_div a:nth-of-type(2) {
+.acceuil_div a:nth-of-type(2) {
     left: 27%;
     outline: none; /* Supprime le contour par défaut */
 }
@@ -218,31 +254,6 @@ header {
     0% { opacity: 1; text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0; }
     50% { opacity: 0.8; text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 25px #0f0; }
     100% { opacity: 1; text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0; }
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    margin-bottom: 100px;
-
-
-}
-
-button {
-    background: #555;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px);
 }
 
 .experience {

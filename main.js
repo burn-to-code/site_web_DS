@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Fonction attente de scroll pour appliquer opacité  
+    // Fonction attente de scroll pour appliquer opacité sur le header 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 30) {
             header.style.backgroundColor = "rgba(81, 16, 101, 0.2)";
@@ -212,43 +212,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
     AboutButton.addEventListener("click", function () {
         if (!isContactMode) {
-            // 1️⃣ Faire disparaître about-text rapidement
+            // Faire disparaître about-text rapidement
             aboutText.classList.add("hidden");
 
-            // 2️⃣ Déplacer about-img vers la gauche
+            // Déplacer about-img vers la gauche
             setTimeout(() => {
                 aboutImg.classList.add("move-left");
             }, 200);
 
-            // 3️⃣ Afficher aboutform et aboutIcon après le déplacement
+            // Afficher aboutform et aboutIcon après le déplacement
             setTimeout(() => {
                 aboutform.classList.add("visible");
                 aboutIcon.classList.add("visible");
             }, 600);
 
-            // 4️⃣ Changer le texte du bouton
+            // Changer le texte du bouton
             setTimeout(() => {
                 AboutButton.textContent = "Découvrez-moi";
             }, 600);
 
         } else {
-            // 🔄 Faire l'inverse
+            // Faire l'inverse
 
-            // 1️⃣ Cacher aboutform et aboutIcon
+            // Cacher aboutform et aboutIcon
             aboutform.classList.remove("visible");
             aboutIcon.classList.remove("visible");
 
-            // 2️⃣ Remettre about-img à sa place
+            // Remettre about-img à sa place
             setTimeout(() => {
                 aboutImg.classList.remove("move-left");
             }, 200);
 
-            // 3️⃣ Réafficher about-text après le déplacement
+            // Réafficher about-text après le déplacement
             setTimeout(() => {
                 aboutText.classList.remove("hidden");
             }, 600);
 
-            // 4️⃣ Changer le texte du bouton
+            // Changer le texte du bouton
             setTimeout(() => {
                 AboutButton.textContent = "Contactez-moi";
             }, 600);
