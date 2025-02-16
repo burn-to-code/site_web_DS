@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //variable pour l'effet sonore
     const sound_key = document.getElementById("sound_key");
-    const h1_acceuil = document.querySelector(".header_div h1");
-    const h2_acceuil = document.querySelector(".header_div h2");
+    const h1_acceuil = document.querySelector(".acceuil_div h1");
+    const h2_acceuil = document.querySelector(".acceuil_div h2");
 
     //Fonction de déclenchement et d'arret du keyboard
     // Play et reset de la bande sonore
