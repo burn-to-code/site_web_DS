@@ -107,6 +107,8 @@
 }
 
 /* CORPS PRINCIPAL / CORPS PRINCIPAL / CORPS PRINCIPAL */
+
+
 body {
     background-color: #121212;
     color: #ffffff;
@@ -119,8 +121,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: url('Images/5_asfasw112.jpg'); 
     background-size: cover;
     background-position: center;
@@ -214,6 +216,12 @@ header {
 /* FIN DU HEADER */
 
 /* SECTION HOME / SECTION HOME */
+
+.home {
+    margin: 0;
+    padding: 0;
+}
+
 /* div principal (contient acceuil_div et l'animation ordinateur)*/
 .acceuil-container {
     text-align: left;
@@ -417,7 +425,7 @@ header {
 
 .page_computer {
     position: absolute;
-    left: 900px;
+    right: 290px;
     top: 32%;
     z-index: 12;
 }
@@ -582,6 +590,21 @@ header {
                 -2px -2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.experience-text h3 {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #d0a9f5, #b266ff, #9d4edd, #7b2cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: inline-block;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
 .experience-base {
     flex-grow: 1; 
     margin-left: 10px;
@@ -615,6 +638,7 @@ header {
     border-radius: 10px;
 }
 
+/* LIEE A L'ANIMATION JS*/
 .experience-buttons {
     display: flex;
     margin-bottom: 30px;
@@ -656,6 +680,7 @@ header {
     opacity: 0.6;
 }
 
+/* LIEE A L'ANIMATION JS*/
 .skill-tag {
     display: inline-block;
     margin: 5px;
@@ -673,7 +698,7 @@ header {
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px);
 }
-
+/* ANIMATIONS JS DE LA SECTION EXPERIENCE*/
 .fade-in {
     opacity: 1;
     transform: translateX(0%);
@@ -685,11 +710,7 @@ header {
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-.home {
-    margin: 0;
-    padding: 0;
-}
+/* FIN DES ANIMATIONS JS DE LA SECTION EXPERIENCE*/
 
 /* STYLE POUR ABOUT AU MOMENT DU REVERSE ROW */
 
@@ -771,6 +792,39 @@ header {
     width: 220px;
     object-fit: cover;
     border-radius: 130px;
+}
+
+.reflect_img {
+    position: relative
+}
+
+.reflect_img::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transform: scaleY(-1);
+    transform-origin: top;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 130px;
+}
+
+.reflect_img:hover::after {
+    opacity: 1;
+}
+
+.reflect-ordinateur {
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    width: 200px;
+    height: 60px;
+    top: 65%;
+    right: 260px;
 }
 
 .about-img h3{
@@ -981,6 +1035,16 @@ form #email {
     border-radius: 5px;
 }
 
+.skills-grid li {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+}
+
+.skills-grid li:hover {
+    transform: translateY(-3px) translateX(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .skill_com {
     background-color: green;
     width: 33%;
@@ -1002,6 +1066,7 @@ form #email {
     height: 500px;
     transition: 0.8s linear;
     position: relative;
+    overflow: hidden;
     transition: 0.8s ease;
     background-image: url(Images/dev_image.jpg);
     background-size: cover;
@@ -1016,6 +1081,7 @@ form #email {
     height: 500px;
     transition: 0.8s linear;
     position: relative;
+    overflow: hidden;
     transition: 0.8s ease;
     background-image: url(Images/fond_tech.png);
     background-size: cover;
@@ -1052,7 +1118,19 @@ form #email {
 }
 
 .skill_dev:hover .list-comp-com {
-    right: 50px;
+    right: 2%;
+    top: 30%;
+}
+
+.skill_dev:hover .titre-comp-com {
+    left: 0px;
+    top: 3%;
+    width: 100%;
+}
+
+.skill_dev:hover .exp-comp-com {
+    left: 2%;
+    top: 30%;
 }
 
 
@@ -1065,9 +1143,17 @@ form #email {
 }
 
 .skill_tech:hover .list-comp-com {
-    right: 50px;
+    left: auto;
+    right: auto;
+    top: 30%;
+    width: 80%;
 }
 
+.skill_tech:hover .titre-comp-com {
+    left: 0px;
+    top: 3%;
+    width: 100%;
+}
 
 .skill_tech:hover .first_vue {
     display: none;
@@ -1101,7 +1187,7 @@ form #email {
     top: 0%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     flex-direction: column;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -1127,10 +1213,15 @@ form #email {
 }
 
 .list-comp-com h4 {
-    font-size: 18px;
-    margin: 0;
+    font-size: 22px;
+    margin: 0px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 
             -2px -2px 5px rgba(0, 0, 0, 0.3);
+    padding-top : 15px;
+}
+
+.skill_com li {
+    padding-top: 2px;
 }
 
 .titre-comp-com {
@@ -1139,7 +1230,7 @@ form #email {
     position: absolute;
     right: -120%;
     top: 0%;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1152,7 +1243,7 @@ form #email {
 .titre-comp-com h3 {
     font-size: 30px;
     margin: 0px;
-    padding: 0;
+    padding: 0px;
 }
 
 .titre-comp-com img {
@@ -1161,7 +1252,7 @@ form #email {
 }
 
 .titre-comp-com p {
-    margin: 0;
+    margin: 0px;
     padding: 0px;
     
 }
@@ -1180,7 +1271,7 @@ form #email {
     top: 32%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     flex-direction: column;
     border-radius: 5px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -1209,19 +1300,12 @@ form #email {
 }
 
 .exp-comp-com h4 {
-    font-size: 18px;
+    font-size: 22px;
     margin: 0;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 
             -2px -2px 5px rgba(0, 0, 0, 0.3);
+    padding-top: 15px;
 }
-
-.exp-comp-com h4 {
-    font-size: 18px;
-    margin: 0;
-}
-
-
-
 
 .separator {
     background-color: white;
@@ -1241,4 +1325,49 @@ form #email {
 
 .first_vue h3 {
     font-size: 28px;
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    margin: 0px;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in;
+}
+
+.tech-icon img {
+    width: 60%;
+    height: 60%;
+    margin: 0px;
+}
+
+.tech-icon figcaption {
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.tech-icon:hover {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,0.7) 0%, rgba(148,187,233,0.7) 100%);
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3); 
+    transform: translate(-3px, -3px); 
+}
+
+.skill_tech .list-comp-com {
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0px;
+    height: auto;
+    justify-content: center;
 }
