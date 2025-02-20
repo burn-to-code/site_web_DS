@@ -24,7 +24,19 @@ function applyAnimation(element) {
     }, 700); 
 };
 
-
+function showDiv(numéro) {
+    const blocks = document.querySelectorAll(".block_project > div");
+    blocks.forEach((block) => {
+        block.classList.remove("visible");
+    });
+    setTimeout(() => {
+        blocks.forEach((block, index) => {
+            if ((index + 1) === numéro) {
+                block.classList.add("visible");
+            }
+        });
+    }, 500); // Délai pour permettre à l'animation de se terminer
+}
 
 //initialisation du dom et attente qu'il soit complétement chargé pour effectué nos modifs
 document.addEventListener("DOMContentLoaded", function() {
@@ -34,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
         distance: '50px', 
         origin: 'bottom' 
     });
+
+    // DECLARATION DES VARIABLES
     // Varaibles de gestion de bug au niveau de l'écriture quand on appuie trop vite sur plusieurs bouton 
     let istyping = false; // Pour savoir quand notre contenu est entrain de s'écrire 
     let currentInterval = null; // Pour garder une référence à l'intervalle en cours
@@ -197,10 +211,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Fonction attente de scroll pour appliquer opacité sur le header 
+    // Attente de scroll pour appliquer opacité sur le header 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 30) {
-            header.style.backgroundColor = "rgba(81, 16, 101, 0.2)";
+            header.style.backgroundColor = "rgba(81, 16, 101, 0.6)";
             header.style.transition = '1s';
         } else {
             header.style.backgroundColor = "transparent";
@@ -208,8 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    // FONCTION ROW REVERSE DU ABOUT
-
+    // ROW REVERSE DU ABOUT
     AboutButton.addEventListener("click", function () {
         if (!isContactMode) {
             // Faire disparaître about-text rapidement
@@ -255,5 +268,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         isContactMode = !isContactMode;
+    });
+
+    // Déclenchent des changement de div dans la section projet
+    document.getElementById("btn-p-1").addEventListener("click", function() {
+        showDiv(1);
+    });
+    document.getElementById("btn-p-2").addEventListener("click", function() {
+        showDiv(2);
+    });
+    document.getElementById("btn-p-3").addEventListener("click", function() {
+        showDiv(3);
+    });
+    document.getElementById("btn-p-4").addEventListener("click", function() {
+        showDiv(4);
     });
 });
