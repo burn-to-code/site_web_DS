@@ -47,11 +47,36 @@ document.addEventListener("DOMContentLoaded", function() {
         origin: 'bottom' 
     });
 
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clikable : true,
+        },    
+        autoplay: {
+            delay: 5000,
+        },
+        effect: 'cube',
+        speed: 1500,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+    });
+
     // DECLARATION DES VARIABLES
     // Varaibles de gestion de bug au niveau de l'écriture quand on appuie trop vite sur plusieurs bouton 
     let istyping = false; // Pour savoir quand notre contenu est entrain de s'écrire 
     let currentInterval = null; // Pour garder une référence à l'intervalle en cours
 
+
+    let isAnimating = false; // Pour savoir si une animation est en cour
     // Variables de sélections d'élément html 
     const experienceButtons = document.querySelectorAll(".experience-button");
     const experienceTitle = document.getElementById("experience-title");
@@ -214,16 +239,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Attente de scroll pour appliquer opacité sur le header 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 30) {
-            header.style.backgroundColor = "rgba(81, 16, 101, 0.6)";
+            header.style.backgroundColor = "rgba(81, 16, 101, 0.7)";
+            header.style.border = "1px solid rgba(0, 0, 0, 0.7)";
             header.style.transition = '1s';
         } else {
             header.style.backgroundColor = "transparent";
+            header.style.border = "none";
         }
     });
 
 
     // ROW REVERSE DU ABOUT
     AboutButton.addEventListener("click", function () {
+        if (isAnimating) {
+            return;
+        }
+        isAnimating = true;
         if (!isContactMode) {
             // Faire disparaître about-text rapidement
             aboutText.classList.add("hidden");
@@ -242,8 +273,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Changer le texte du bouton
             setTimeout(() => {
                 AboutButton.textContent = "Découvrez-moi";
+                isAnimating = false;
             }, 600);
-
         } else {
             // Faire l'inverse
 
@@ -264,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Changer le texte du bouton
             setTimeout(() => {
                 AboutButton.textContent = "Contactez-moi";
+                isAnimating = false;
             }, 600);
         }
 

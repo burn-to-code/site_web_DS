@@ -6,6 +6,8 @@
     <title>CV Interactif</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="https://unpkg.com/scrollreveal" defer></script>
     <script src="main.js" defer></script>
 </head>
@@ -36,9 +38,9 @@
                 <div class="acceuil_div">
                     <h1>Dylan Senasson</h1>
                     <h2>Commercial & Développeur Web</h2>
-                    <p>Bienvenue sur mon premier site web ! 🚀 Vous y trouverez mon CV interactif, mettant en avant mes compétences et expériences professionnelles, ainsi qu’un portfolio regroupant mes projets de développement. Passionné par le développement web et le développement d’applications Java, je suis à la recherche d’un stage ou d’une première expérience pour continuer à apprendre et évoluer dans ce domaine. N’hésitez pas à parcourir mon site et à me contacter pour toute opportunité ou collaboration ! 💡✨</p>
+                    <p>Bienvenue sur mon site web ! Vous y trouverez mon CV interactif, mettant en avant mes compétences et expériences professionnelles, ainsi qu’un portfolio regroupant mes projets de développement. Passionné par le développement web et le développement d’applications Java, je suis à la recherche d’un stage ou d’une première expérience pour continuer à apprendre et évoluer dans ce domaine. N’hésitez pas à parcourir mon site et à me contacter pour toute opportunité ou collaboration ! </p>
                     <a href="#contact">Contactez-moi</a>
-                    <a href="#skills">Mes projets</a>  
+                    <a href="#projet">Mes projets</a>  
                     <div class="ordinateur">
                         <img src="Images/Animation_Home/Ordinateur.svg" alt="ordinateur">
                     </div>
@@ -84,7 +86,7 @@
             </div>
         </section>
 
-        <section class="about-me">
+        <section class="about-me" id="about">
             <div class="center_inline_block">
                 <h2>A propos de moi</h2>
             </div>
@@ -354,7 +356,7 @@
             </div>
         </section>
 
-        <section class="projet">
+        <section class="project" id="projet">
              <div class="center_inline_block">
                 <h2>Projets</h2>
             </div>                
@@ -459,9 +461,43 @@
             </div>
         </section>
 
-        <section id="hobbies">
-            <h2>Hobbies</h2>
-            <p>À compléter...</p>
+        <section id="hobbies" class="hobbies">
+            <div class="center_inline_block">
+               <h2>Hobbies</h2>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h3>SKI</h3>
+                        <div class="list-img-hob">
+                            <img src="Images/dev_image.jpg" alt="Image 1">
+                            <img src="Images/dev_image.jpg" alt="Image 2">
+                            <img src="Images/dev_image.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3>ECHEC</h3>
+                        <div class="list-img-hob">
+                            <img src="Images/dev_image.jpg" alt="Image 1">
+                            <img src="Images/dev_image.jpg" alt="Image 2">
+                            <img src="Images/dev_image.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3>VOYAGES</h3>
+                        <div class="list-img-hob">
+                            <img src="Images/dev_image.jpg" alt="Image 1">
+                            <img src="Images/dev_image.jpg" alt="Image 2">
+                            <img src="Images/dev_image.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+                <!-- fleche et pagination -->   
+                <div class="swiper-pagination"></div>   
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+         
+            </div>
         </section>
         
     </div>
