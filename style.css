@@ -558,9 +558,9 @@ header {
     flex-direction: column;
     width: auto;
     overflow: hidden;
-    height: 100vh;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
+    height: auto;
+    padding-bottom: 0px;
+    margin-bottom: 12%;
 }
 
 .experience h2 {
@@ -584,7 +584,7 @@ header {
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     border-radius: 10px;
     padding-left: 10px;
     height: 100%;
@@ -594,9 +594,11 @@ header {
 .experience-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: space-between; 
     width: 60%;
     height: 100%;
+    min-height: 500px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 
                 -2px -2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -617,7 +619,6 @@ header {
 }
 
 .experience-base {
-    flex-grow: 1; 
     margin-left: 10px;
     margin-top: 10px;
     align-items: flex-start;
@@ -625,7 +626,6 @@ header {
 
 /* LIEE A L'ANIMATION JS*/
 .experience-skill {
-    margin-top: auto; 
     margin-bottom: 10px;
     margin-left: 10px;
 }
@@ -633,7 +633,7 @@ header {
 /* LIEE A L'ANIMATION JS*/
 .experience-image {
     width: 35%;
-    height: 100%;
+    height: 500px;
     overflow: hidden; 
     display: flex;
     align-items: center;
@@ -1044,7 +1044,7 @@ form #email {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: auto;
     border-radius: 5px;
 }
 
@@ -1061,7 +1061,8 @@ form #email {
 .skill_com {
     background-color: green;
     width: 33%;
-    height: 500px;
+    height: auto;
+    min-height: 500px;
     transition: 0.3s linear;
     position: relative;
     overflow: hidden;
@@ -1076,7 +1077,8 @@ form #email {
 .skill_dev {
     background-color: red;
     width: 33%;
-    height: 500px;
+    height: auto;
+    min-height: 500px;
     transition: 0.8s linear;
     position: relative;
     overflow: hidden;
@@ -1091,7 +1093,8 @@ form #email {
 .skill_tech {
     background-color: yellow;
     width: 33%;
-    height: 500px;
+    height: auto;
+    min-height: 500px;
     transition: 0.8s linear;
     position: relative;
     overflow: hidden;
@@ -1415,7 +1418,7 @@ form #email {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.5%;
+    gap: 10px;
     justify-content: flex-start;
     transition: 0.3q ease-in;
 }
@@ -1427,7 +1430,7 @@ form #email {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.5%;
+    gap: 10px;
     justify-content: flex-start;
     transition: 0.3q ease-in;
 }
@@ -1439,7 +1442,7 @@ form #email {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.5%;
+    gap: 10px;
     justify-content: flex-start;
     transition: 0.3q ease-in;
 }
@@ -1451,14 +1454,14 @@ form #email {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.5%;
+    gap: 10px;
     justify-content: flex-start;
     transition: 0.3q ease-in;
 }
 
 .project-container{
     padding: 10px;
-    width: 30.53274822%;
+    width: calc(33.33% - 30px);
     height: 70%;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -1529,13 +1532,14 @@ form #email {
 }
 
 .block_project {
-    height: 60%;
+    height: 50vh;
     width: 100%;
     position: relative;
 }
 
 .project {
-    height: 90vh;
+    height: 500px;
+    max-height: 2000px;
     margin-bottom: 0px;
 }
 
@@ -1573,8 +1577,6 @@ form #email {
     padding-left: 4%;
     padding-right: 4%;
 }
-
-
 
 .swiper-slide {
     display: flex;
@@ -1646,3 +1648,175 @@ form #email {
     background: blue
 }
 
+/* CONTACT CONTACT CONTACT */
+
+.contact .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    height: 450px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contact .contact-text {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contact .contact-direct {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contact h2 {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #d0a9f5, #b266ff, #9d4edd, #7b2cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: inline-block;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.icon_reseaux_contact {
+    height: 90px;
+    width: 300px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    animation: apparition 2s ease-in-out forwards 3.5s;
+    margin-top: 20px;
+}
+
+.icon_reseaux_contact img {
+    height: 40px;
+    width: 40px;
+    transition: 0.3s ease-in;
+}
+
+/* FOOTER FOOTER FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    height: 100px;
+    background-color: rgba(131,58,180,0.6);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+    width: 33.3%;
+    padding: 0px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 33.3%;
+    padding: 0px;
+}
+
+.footer-contact a, .footer-contact span {
+    text-decoration: none;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 
+                -2px -2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in;
+}
+
+.footer-contact a:hover, .footer-contact span:hover {
+    color: rgba(148,187,233,1);
+
+}
+
+.footer-contact p {
+    margin: 0px;
+    padding: 0px
+}
+
+.footer-contact .separator {
+    background-color: white;
+    height: 1px;
+    width: 60px;
+    margin: 15px;
+}
+
+
+.footer-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    gap: 20px;
+    height: 100%;
+    width: 33.3%;
+    padding: 0px;
+    padding-right: 20px;
+}
+
+.footer-icon img {
+    height: 40px;
+    width: 40px;
+    transition: 0.3s ease-in;
+    border-radius: 5px;
+}
+
+.footer-icon img:hover {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-3px);
+    height: 45px;
+    width: 45px;
+}

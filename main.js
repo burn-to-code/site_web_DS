@@ -1,43 +1,3 @@
-// Fonction d'animation du div expériences professionnelles
-function applyAnimation(element) {
-    // remove et opacity pour réinitialiser l'animation et sur qu'elle s'effecture a chaque fois
-    element.classList.remove("fade-in", "slide-out");
-    element.style.opacity = "0";
-    //debut d'animation slide
-    element.classList.add("slide-out");
-
-    setTimeout(() => { 
-        //remove de la classe slide-out de disparition du div
-        element.classList.remove("slide-out");
-        element.style.opacity = "0"; 
-
-        setTimeout(() => {
-            //ajout du fade-in pour faire apparaitre notre contenu 
-            element.classList.add("fade-in");
-            element.style.opacity = "1"; 
-
-            setTimeout(() => {
-                //remove de la class fade-in
-                element.classList.remove("fade-in");
-            }, 700);
-        }, 100); 
-    }, 700); 
-};
-
-function showDiv(numéro) {
-    const blocks = document.querySelectorAll(".block_project > div");
-    blocks.forEach((block) => {
-        block.classList.remove("visible");
-    });
-    setTimeout(() => {
-        blocks.forEach((block, index) => {
-            if ((index + 1) === numéro) {
-                block.classList.add("visible");
-            }
-        });
-    }, 500); // Délai pour permettre à l'animation de se terminer
-}
-
 //initialisation du dom et attente qu'il soit complétement chargé pour effectué nos modifs
 document.addEventListener("DOMContentLoaded", function() {
     // Fonction scroll reveal sur l'emsemble de la page : fait apparaitre les sections html au moment du scroll 
@@ -47,6 +7,48 @@ document.addEventListener("DOMContentLoaded", function() {
         origin: 'bottom' 
     });
 
+    // Fonction d'animation du div expériences professionnelles
+    function applyAnimation(element) {
+        // remove et opacity pour réinitialiser l'animation et sur qu'elle s'effecture a chaque fois
+        element.classList.remove("fade-in", "slide-out");
+        element.style.opacity = "0";
+        //debut d'animation slide
+        element.classList.add("slide-out");
+
+        setTimeout(() => { 
+            //remove de la classe slide-out de disparition du div
+            element.classList.remove("slide-out");
+            element.style.opacity = "0"; 
+
+            setTimeout(() => {
+                //ajout du fade-in pour faire apparaitre notre contenu 
+                element.classList.add("fade-in");
+                element.style.opacity = "1"; 
+
+                setTimeout(() => {
+                    //remove de la class fade-in
+                    element.classList.remove("fade-in");
+                }, 700);
+            }, 100); 
+        }, 700); 
+    };
+
+    // la fonction qui montre les differents div dans la section project
+    function showDiv(numéro) {
+        const blocks = document.querySelectorAll(".block_project > div");
+        blocks.forEach((block) => {
+            block.classList.remove("visible");
+        });
+        setTimeout(() => {
+            blocks.forEach((block, index) => {
+                if ((index + 1) === numéro) {
+                    block.classList.add("visible");
+                }
+            });
+        }, 500); // Délai pour permettre à l'animation de se terminer
+    }
+
+    // object Swiper pour la gestion du slider section hobbies
     const swiper = new Swiper('.swiper-container', {
         loop: true,
         navigation: {
@@ -88,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const header = document.querySelector("header");
 
     //variable pour l'effet sonore
-    const sound_key = document.getElementById("sound_key");
+   /* const sound_key = document.getElementById("sound_key");
     const h1_acceuil = document.querySelector(".acceuil_div h1");
-    const h2_acceuil = document.querySelector(".acceuil_div h2");
+    const h2_acceuil = document.querySelector(".acceuil_div h2"); 
 
     //Fonction de déclenchement et d'arret du keyboard
     // Play et reset de la bande sonore
@@ -99,10 +101,10 @@ document.addEventListener("DOMContentLoaded", function() {
         sound_key.play();
     }
     // Stop reset de la bande sonore
-    function StopSoundKey() {
+    /function StopSoundKey() {
         sound_key.load();
         sound_key.currentTime = 0;
-    }
+    } */
 
     //Variable du conteneur about pour le row-reverse
     const AboutButton = document.getElementById("button-about");
@@ -160,11 +162,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // FONCTION DU SON CLAVIER AU DECLENCHEMENT DE L'ANIMATION ET ARRET
     // DECLENCHEMENT
-    h1_acceuil.addEventListener("animationstart", function (event) {
+  /*  h1_acceuil.addEventListener("animationstart", function (event) {
         if (event.animationName === "typing_h1") {
-            PlaySoundKey();
+       PlaySoundKey();
         }
-    });
+    }); 
 
     h2_acceuil.addEventListener("animationstart", function (event) {
         if (event.animationName === "typing_h2") {
@@ -182,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.animationName === "typing_h2") {
             StopSoundKey();
         }
-    });
+    }); */
 
 
 //FONCTION DU DIV EXPERIENCE AU CLIC
