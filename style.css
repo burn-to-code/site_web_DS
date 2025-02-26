@@ -776,7 +776,7 @@ header {
 }
 
 .about-img {
-    width: 31%;
+    width: 30%;
     position: absolute;
     right: 10px;
     top: -5px;
@@ -874,9 +874,11 @@ form {
 .contact-div {
     position: absolute;
     right: 10px;
-    width: 60%;
+    width: 65%;
+    height: 490px;
     flex-direction: row;
     display: flex;
+    align-items: stretch;
 }
 
 .contact-div h2 {
@@ -925,9 +927,17 @@ form button {
 }
 
 .div2-contact {
-    padding-top: 130px;
     width : 40%;
+    height: 100%;
+    flex: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    margin: auto;
+    padding-top: 5%;
+    gap: 10px;
 }
 
 .div2-contact a {
@@ -945,14 +955,11 @@ form #email {
 
 .contact-direct p {
     text-align: center;
+    padding-top:10px;
+    padding-bottom: 10px;
 }
 
 .icon_reseaux {
-    position: absolute;
-    height: 90px;
-    width: 300px;
-    right: 20px;
-    top: 60%;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -1026,7 +1033,7 @@ form #email {
 
 /* Animation du déplacement */
 .move-left {
-    transform: translateX(-177%);
+    transform: translateX(-192%);
     transition: transform 0.8s ease;
 }
 
@@ -1387,6 +1394,8 @@ form #email {
     height: auto;
     justify-content: center;
 }
+/* FIN DE LA SECTION COMPETENCE */
+/* DEBUT DE LA SECTION PROJET */
 
 .project h2 {
     font-size: 40px;
@@ -1538,7 +1547,7 @@ form #email {
 }
 
 .project {
-    height: 500px;
+    height: 600px;
     max-height: 2000px;
     margin-bottom: 0px;
 }
@@ -1686,6 +1695,60 @@ form #email {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+
+.email-contact {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.email-contact a{
+    font-size: 15px;
+    color: white; 
+    background: #6a5acd; 
+    border-radius: 25px; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    box-shadow: 0 0 0 3px rgba(148, 187, 233, 0.6); 
+    transition: all 0.3s ease-in-out; 
+    user-select: none;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.phone-number {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.phone-number a {
+    font-size: 15px;
+    color: white; 
+    background: #6a5acd; 
+    border-radius: 25px; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    box-shadow: 0 0 0 3px rgba(148, 187, 233, 0.6); 
+    transition: all 0.3s ease-in-out; 
+    user-select: none;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.email-contact a:hover, .phone-number a:hover {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-3px); 
+}
+
+.email-contact a:active, .phone-number a:active {
+    transform: translateY(0); 
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .contact-container form {
     display: flex;
     flex-direction: column;
@@ -1723,7 +1786,7 @@ form #email {
     justify-content: space-around;
     display: flex;
     animation: apparition 2s ease-in-out forwards 3.5s;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .icon_reseaux_contact img {
@@ -1742,7 +1805,7 @@ footer {
     padding-right: 10px;
     align-items: center;
     height: 100px;
-    background-color: rgba(131,58,180,0.6);
+    background-color: rgba(0,0,0,0.6);
     border: 2px solid rgba(0, 0, 0, 0.7);
     
 }

@@ -1,5 +1,14 @@
 //initialisation du dom et attente qu'il soit complétement chargé pour effectué nos modifs
 document.addEventListener("DOMContentLoaded", function() {
+
+    // INJECTION DE L'ADRESSE MAIL ENCODEE 
+    const emailChars = [115, 101, 110, 97, 115, 115, 111, 110, 46, 100, 101, 118, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109];
+    const email = emailChars.map(c => String.fromCharCode(c)).join('');
+    const emailElement = document.querySelectorAll(".email-contact");
+    emailElement.forEach(element => {
+        element.innerHTML = `<a href="mailto:${email}">me contacter par mail</a>`;
+    });
+
     // Fonction scroll reveal sur l'emsemble de la page : fait apparaitre les sections html au moment du scroll 
     ScrollReveal().reveal('section', { 
         delay: 200, 
@@ -76,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Varaibles de gestion de bug au niveau de l'écriture quand on appuie trop vite sur plusieurs bouton 
     let istyping = false; // Pour savoir quand notre contenu est entrain de s'écrire 
     let currentInterval = null; // Pour garder une référence à l'intervalle en cours
-
 
     let isAnimating = false; // Pour savoir si une animation est en cour
     // Variables de sélections d'élément html 

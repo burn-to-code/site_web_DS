@@ -15,7 +15,7 @@
     <div class="parallax"></div>
     <div class="content-parallax">
         <header>
-            <a>
+            <a href="#acceuil">
                 <img src="Images/logo-cv.png" alt="logo du site" class="img-logo" href="#acceuil">
             </a>
             <nav class ="navigation">
@@ -24,7 +24,7 @@
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#experience">Expériences</a></li>
                     <li><a href="#projet">Projet</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact_section">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,13 +33,13 @@
             <source src="sound/Key_Clavier.mp3" type="audio/mpeg">
         </audio>
 
-        <section class="home">
+        <section class="home" id="acceuil">
             <div class = "acceuil-container">
                 <div class="acceuil_div">
                     <h1>Dylan Senasson</h1>
                     <h2>Commercial & Développeur Web</h2>
                     <p>Bienvenue sur mon site web ! Vous y trouverez mon CV interactif, mettant en avant mes compétences et expériences professionnelles, ainsi qu’un portfolio regroupant mes projets de développement. Passionné par le développement web et le développement d’applications Java, je suis à la recherche d’un stage ou d’une première expérience pour continuer à apprendre et évoluer dans ce domaine. N’hésitez pas à parcourir mon site et à me contacter pour toute opportunité ou collaboration ! </p>
-                    <a href="#contact">Contactez-moi</a>
+                    <a href="#contact_section">Contactez-moi</a>
                     <a href="#projet">Mes projets</a>  
                     <div class="ordinateur">
                         <img src="Images/Animation_Home/Ordinateur.svg" alt="ordinateur">
@@ -109,7 +109,7 @@
                         <h2>Contact</h2>
                         <h3>Formulaire de contact</h3>
                         <p>Si vous souhaitez me contacter directement, merci de m'envoyer un message  via le formulaire çi-dessous</p>
-                        <form class="contact-form">
+                        <form class="contact-form" action="https://formspree.io/f/myzkqajp" method="POST">
                             <label for="email">Email <span>*</span> :</label>
                             <input type="email" id="email" name="email" required placeholder="Votre email">
                             
@@ -123,33 +123,30 @@
                         </form>
                     </div>
                     <div class="div2-contact">
-                        <p>Vous préferez me contacter directement ? voici mes coordonnées :</p>
-                        <div class="contact-direct">
-                            <p><a href="mailto:dylan.senasson@outlook.fr">dylan.senasson@outlook.fr</a></p>
-                            <p><span class="phone-number">06 XX XX XX XX</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="icon_reseaux hidden">
-                    <div class="icon_rese">
-                        <div class="icon_res">
-                            <a href="www.instagram.com"><img src="Images/Animation_Home/icon_insta2.svg" alt="icon_instagram"></a>
-                        </div>  
-                        <p>instagram</p>
-                    </div class="icon_rese"> 
-                    <div> 
-                        <div class="icon_res">
-                            <img src="Images/Animation_Home/icon_whatapp.svg" alt="Icon_whatapp">
+                        <span class="email-contact"></span>
+                        <p><span class="phone-number"><a href="tel:+33646225234">Me contacter par téléphone</a></span></p>                     
+                        <div class="icon_reseaux hidden">
+                            <div class="icon_rese">
+                                <div class="icon_res">
+                                    <a href="www.instagram.com"><img src="Images/Animation_Home/icon_insta2.svg" alt="icon_instagram"></a>
+                                </div>  
+                                <p>instagram</p>
+                            </div> 
+                            <div class="icon_rese"> 
+                                <div class="icon_res">
+                                    <img src="Images/Animation_Home/icon_whatapp.svg" alt="Icon_whatapp">
+                                </div> 
+                                <p>Whatapp</p> 
+                            </div>
+                            <div class="icon_rese">
+                                <div class="icon_res">
+                                    <img src="Images/Animation_Home/icon_likedin.svg" alt="Icon_linkedin">
+                                </div> 
+                                <p>LinkedIn</p>
+                            </div>
                         </div> 
-                        <p>Whatapp</p> 
                     </div>
-                    <div class="icon_rese">
-                        <div class="icon_res">
-                            <img src="Images/Animation_Home/icon_likedin.svg" alt="Icon_linkedin">
-                        </div> 
-                        <p>LinkedIn</p>
-                    </div>
-                </div>  
+                </div> 
             </div>
         </section>
 
@@ -500,7 +497,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact_section">
             <div class="center_inline_block">
                 <h2>Contact</h2>
             </div>
@@ -508,7 +505,7 @@
                 <div class="contact-text">
                     <h3>Formulaire de contact</h3>
                     <p>Si vous souhaitez me contacter directement, merci de m'envoyer un message via le formulaire ci-dessous</p>
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/myzkqajp" method="POST">
                         <label for="email">Email <span>*</span> :</label>
                         <input type="email" id="email" name="email" required placeholder="Votre email">
                         
@@ -524,8 +521,8 @@
                 <div class="contact-direct">
                     <h3>Vous préférez un contact direct ?</h3>
                     <p>Voici mes coordonnées afin de pouvoir me contacter directement</p>
-                    <p><a href="mailto:dylan.senasson@outlook.fr">dylan.senasson@outlook.fr</a></p>
-                    <p><span class="phone-number">06 XX XX XX XX</span></p>
+                    <span class="email-contact"></span>
+                    <span class="phone-number"><a href="tel:+33646225234">Me contacter par téléphone</a></span>
                     <div class="icon_reseaux_contact">
                         <div class="icon_rese">
                             <div class="icon_res">
@@ -555,7 +552,7 @@
                     <p>© 2025 Dylan Senasson - Tous droits réservés</p>
                 </div>
                 <div class="footer-contact">
-                    <p><a href="mailto:dylan.senasson@outlook.fr">dylan.senasson@outlook.fr</a></p>
+                    <p><a href="mailto:&#115;&#101;&#110;&#097;&#115;&#115;&#111;&#110;&#046;&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Me contacter par mail</a></p>
                     <div class="separator"></div>
                     <p><span class="phone-number">06 XX XX XX XX</span></p>
                 </div>
