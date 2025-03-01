@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const email = emailChars.map(c => String.fromCharCode(c)).join('');
     const emailElement = document.querySelectorAll(".email-contact");
     emailElement.forEach(element => {
-        element.innerHTML = `<a href="mailto:${email}">me contacter par mail</a>`;
+        element.innerHTML = `<a href="mailto:${email}">me contacter par mail<i class="fa-solid fa-envelope" style="padding: 5px;"></i></a>`;
     });
 
     // Fonction scroll reveal sur l'emsemble de la page : fait apparaitre les sections html au moment du scroll 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let istyping = false; // Pour savoir quand notre contenu est entrain de s'écrire 
     let currentInterval = null; // Pour garder une référence à l'intervalle en cours
 
-    let isAnimating = false; // Pour savoir si une animation est en cour
+    let isAnimating = false; // Pour savoir si une animation est en cours
     // Variables de sélections d'élément html 
     const experienceButtons = document.querySelectorAll(".experience-button");
     const experienceTitle = document.getElementById("experience-title");
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
             experienceText.textContent = ""; // initialisation du text a zéro avant notre fonction d'écriture pour toujours reloader notre texte lors d'un changement de bouton 
             experienceImage.src = experiences[index].image;
             experienceSkills.innerHTML = "";
-            // modification des compétences : un enfer j'ai pas tout compris, en tout cas on utilise foreach pour parcourir tout les skill de notre liste d'objet.skills
+            // modification des compétences : un enfer j'ai pas tout compris, en tout cas on utilise foreach pour parcourir tout les skill de notre liste d'objet.skills ca on sait 
             experiences[index].skills.forEach(skill => {
                 const skillElement = document.createElement("a"); // pour chaque element on crée un balise a, un bouton qu'on sauvegarde dans une variable
                 skillElement.href = `#${skill.replace(/\\s+/g, '-').toLowerCase()}`; // ajouter un href pour l"ancre afin d'étre rediriger vers l'ancre en question

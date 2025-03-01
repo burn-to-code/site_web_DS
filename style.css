@@ -107,7 +107,9 @@
 }
 
 /* CORPS PRINCIPAL / CORPS PRINCIPAL / CORPS PRINCIPAL */
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #121212;
@@ -230,9 +232,12 @@ header {
 
 /* div principal (contient acceuil_div et l'animation ordinateur)*/
 .acceuil-container {
-    text-align: left;
-    padding: 100px 20px;
-    position: relative;
+    text-align: left;   
+    padding: 0;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .acceuil-container::before {
@@ -247,7 +252,8 @@ header {
 /* Div de présentation */
 .acceuil_div{
     display: flex;
-    height: 450px;
+    height: 100%;
+    width: 60%;
     flex-direction: column;
     align-items: center;
     justify-content: start;
@@ -342,6 +348,15 @@ header {
 /* FIN DU DIV DE PRESENTATION */
 
 /* DEBUT DE L'ANIMATION ACCEUIL*/
+
+.acceuil_img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
 
 .ordinateur {
     position : absolute;
@@ -923,11 +938,11 @@ form button {
 }
 
 .div1-contact {
-    width : 65%;
+    width : 55%;
 }
 
 .div2-contact {
-    width : 40%;
+    width : 45%;
     height: 100%;
     flex: 1;
     text-align: center;
@@ -962,7 +977,9 @@ form #email {
 .icon_reseaux {
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 40px;
     display: flex;
     animation: apparition 2s ease-in-out forwards 3.5s; 
 }
@@ -972,6 +989,12 @@ form #email {
     width: 40px;
     transition: 0.3s ease-in;
 
+}
+
+.icon_rese i {
+    font-size: 40px;
+    transition: 0.3s ease-in;
+    color: white;
 }
 
 .icon_res {
@@ -988,9 +1011,8 @@ form #email {
     transform: translateY(-3px);
 }
 
-.icon_res img:hover {
-    height: 45px;
-    width: 45px;
+.icon_res i:hover {
+    font-size: 45px;
 }
 
 .icon_rese {
@@ -1744,7 +1766,6 @@ form #email {
 }
 
 .email-contact a:active, .phone-number a:active {
-    transform: translateY(0); 
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -1882,4 +1903,10 @@ footer {
     transform: translateY(-3px);
     height: 45px;
     width: 45px;
+}
+
+.footer-icon i {
+    font-size: 40px;
+    transition: 0.3s ease-in;
+    color: white;
 }
