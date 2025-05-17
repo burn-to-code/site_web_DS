@@ -2007,6 +2007,7 @@ footer {
         height: 350px;
         width: 100%;
         max-width: 375px;
+        min-width: 375px;
     }
 
     .acceuil_div h1 {
@@ -2093,7 +2094,6 @@ footer {
         font-size: 20px;
     }
 
-    
     .ordinateur {
         right: auto;
         left : auto;
