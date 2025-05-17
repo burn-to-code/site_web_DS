@@ -2098,11 +2098,7 @@ footer {
         right: auto;
         left : auto;
         top: 0%;
-    }
-    
-    .ordinateur img {
-        width: 300px;
-        height: 300px;
+        opacity: 1;
     }
     
     .reflect-ordinateur {
