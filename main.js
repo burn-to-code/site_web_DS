@@ -47,11 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const blocks = document.querySelectorAll(".block_project > div");
         blocks.forEach((block) => {
             block.classList.remove("visible");
+            block.style.position = "absolute"; // Positionner tous les blocs en absolu
         });
         setTimeout(() => {
             blocks.forEach((block, index) => {
                 if ((index + 1) === numéro) {
                     block.classList.add("visible");
+                    block.style.position = "relative"; // Positionner le bloc visible en relatif
                 }
             });
         }, 500); // Délai pour permettre à l'animation de se terminer
@@ -135,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             title: "Assitant de direction chez Call Masther - 6 mois (2024-2024)",
             text: "Après une année réussie en tant que commercial terrain avec 250 000 € de chiffre d'affaires généré, j'ai été promu assistant de direction pour prendre en charge des missions stratégiques. J'ai supervisé la facturation afin d'optimiser la trésorerie et garantir la précision des paiements. J'ai structuré une veille commerciale et réglementaire tout en formant et coordonnant l'équipe commerciale pour améliorer les performances de vente. Pour optimiser les opérations, j'ai mis en place un système automatisé de réservation et développé des projets de classe, améliorant ainsi l'organisation des formations et l'expérience des apprenants.",
-            image: "Images/Vendeur_Bouygues.jpg",
+            image: "Images/Vendeur_Bouygues.png",
             skills: ["Gestion de la facturation et suivi des paiements",
                     "Management d'une équipe commerciale",
                     "Optimisation des opérations et des marges",
@@ -324,5 +326,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     document.getElementById("btn-p-4").addEventListener("click", function() {
         showDiv(4);
+    });
+
+    
+    const burger = document.querySelector(".burger");
+    const navigation = document.querySelector(".navigation");
+
+    const menuLinks = document.querySelectorAll(".menu a");
+
+    burger.addEventListener("click", function () {
+        navigation.classList.toggle("active");
+    });
+
+    // Fermer le menu lorsqu'on clique sur un lien
+    menuLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("active");
+      });
     });
 });
